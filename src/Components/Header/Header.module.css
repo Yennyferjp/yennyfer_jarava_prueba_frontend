@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family:Roboto:wght@300;400;500;700&display=swap');
+
+.header {
+    
+    position: fixed;
+    font-family: 'Roboto', sans-serif;
+    top: 0;
+    left: 0;
+    width: 70%;
+    background-color: #0C1726;
+
+}
+
+a {
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0C1726;
+}
+
+.menuItem {
+    padding: 15px 10px;
+    color: #fff;
+}
+
+.submenu {
+    list-style: none;
+    padding: 10px 30px;
+    display: none;
+    position: absolute;
+    background-color: #3C5973;
+    left: 38%;
+    transform: translateX(-50%);
+    top: 40px;
+    border-radius: 16px;
+}
+
+.submenu ul {
+    list-style: none;
+    padding: 0px 0px;
+
+}
+
+.submenu a {
+    color: #fff;
+}
+
+.submenu a:hover {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.menuItem:hover .submenu {
+    display: block;
+}
+
+.submenú:hover {
+    display: block;
+}
+
+.submenuItem {
+    padding: 5px 0px;
+}
+.submenuItem1 {
+    padding: 5px 0px 0 30px;
+}
+
+.menuItemSpacer{
+    background-color: #fff;
+    height: 2px;
+    width: 100%;
+}
+
+/* Estilos para tamaños de pantalla móviles */
+@media (min-width: 320px) and (max-width: 768px) {
+    .header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        justify-content: space-around;
+        background-color: #0C1726;
+    
+    }
+    
+    .menu {
+        padding-top: 5%;
+    }
+    .submenu {
+       
+        left: 48%;
+        transform: translateX(-50%);
+        top: 50px;
+        border-radius: 16px;
+        padding: 2px 20px;
+    }
+    .submenuItem {
+        padding: 5px 0px 1px 0;
+    }
+}
+
+/* Estilos para tamaños de pantalla de tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        background-color: lightgreen;
+    }
+}
+
+/* Estilos para tamaños de pantalla de escritorio */
+@media (min-width: 1024px) {
+    .header {
+        background-color: lightyellow;
+    }
+}
