@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family:Roboto:wght@300;400;500;700&display=swap');
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    background-color: #3C5973;
+    width: 75%;
+    height: auto;
+    position: relative; 
+    z-index: 1; 
+  }
+  
+  .circularImage {
+    border-radius: 50%;
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto; 
+    display: block; 
+  }
+
+  
+  .cardTitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 12px;
+    color: #0C1726;
+    
+  }
+  
+  .cardDescription {
+    font-size: 16px;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin-top: 8px;
+  }
+  
