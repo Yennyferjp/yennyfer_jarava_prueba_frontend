@@ -10,27 +10,23 @@ import styles from './Carousel.module.css';
 function CarouselPrevArrow(props) {
   const { className, onClick } = props;
   return (
-
     <img
       src={leftArrowImage}
       alt="Flecha izquierda"
       className={`${className} ${styles.arrowLeft}`}
       onClick={onClick}
     />
-
   );
 }
 
 function CarouselNextArrow(props) {
   const { className,  onClick } = props;
   return (
-
     <img
       src={rightArrowImage}
       alt="Flecha derecha"
       className={`${className} ${styles.arrowRight}`}
       onClick={onClick}
-
     />
   );
 }
@@ -76,7 +72,23 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 3,
     nextArrow: <CarouselNextArrow />,
-    prevArrow: <CarouselPrevArrow />
+    prevArrow: <CarouselPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768, 
+        settings: {
+          slidesToShow: 1, 
+          centerPadding: "10px", 
+        },
+      },
+      {
+        breakpoint: 1024, 
+        settings: {
+          slidesToShow: 2, 
+          centerPadding: "10px", 
+        },
+      },
+    ],
   };
 
   return (
