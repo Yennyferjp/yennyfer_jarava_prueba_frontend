@@ -20,7 +20,7 @@ function CarouselPrevArrow(props) {
 }
 
 function CarouselNextArrow(props) {
-  const { className,  onClick } = props;
+  const { className, onClick } = props;
   return (
     <img
       src={rightArrowImage}
@@ -60,39 +60,43 @@ const Carousel = () => {
       title: 'Lorem Ipsum5',
       content: 'Lorer ipsum dalor sit amet, consectetur adipiscing elit. Quisque eu consectetur mi. Sed nunc enim, facilisis et rhoncus id, rutrum id turpis. Ut nec gravida dui, quis placerat massa. Aeneanvitae nibh eu neque finibus luctus.',
     },
-   
+
   ];
 
   const settings = {
     dots: true,
     infinite: true,
-    centerMode: true,
-    className: "center",
-    centerPadding: "200px",
+
     speed: 500,
     slidesToShow: 3,
+
+    initialSlide: 0,
     nextArrow: <CarouselNextArrow />,
     prevArrow: <CarouselPrevArrow />,
     responsive: [
       {
-        breakpoint: 768, 
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 1, 
-          centerPadding: "10px", 
+          slidesToShow: 2,
         },
       },
       {
-        breakpoint: 1024, 
+        breakpoint: 769,
         settings: {
-          slidesToShow: 2, 
-          centerPadding: "10px", 
+          slidesToShow: 2,
         },
       },
+      {
+        breakpoint: 321,
+        settings: {
+          slidesToShow: 1,
+        },
+      }
     ],
   };
 
   return (
-    <div className={styles.carouselContainer}>
+    <section className={styles.carouselContainer}>
 
       <Slider {...settings} ref={sliderRef}>
         {cardData.map((data, index) => (
@@ -101,7 +105,7 @@ const Carousel = () => {
 
       </Slider>
 
-    </div>
+    </section>
   );
 };
 
