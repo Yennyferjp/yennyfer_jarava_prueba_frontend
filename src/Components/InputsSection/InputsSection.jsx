@@ -68,11 +68,10 @@ function InputsSection() {
   };
 
   return (
-    <div className={styles.InputsSection}>
-      <div>
-        
+    <section className={styles.InputsSection}>
+      <div className={styles.divSlect}>
         <button className={styles.selectButton} onClick={handleToggleSelect}>
-        Select {isSelectOpen ? <i class="fa-solid fa-caret-up"></i> : <i class="fa-solid fa-caret-down"></i>} 
+        Select  <i className={`fa-solid ${isSelectOpen ? "fa-caret-up" :"fa-caret-down"} `} /> 
       </button>
         {isSelectOpen && (
           <ul className={styles.selectList}>
@@ -163,7 +162,7 @@ function InputsSection() {
           Submit
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
