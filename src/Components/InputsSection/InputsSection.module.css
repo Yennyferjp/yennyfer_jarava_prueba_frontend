@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap');
+
+.InputsSection {
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+  background-color: #D9D9D9;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.label {
+  font-weight: bold;
+  color: #0C1726;
+  font-family: Roboto;
+
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+.selectButton {
+  border: 1px solid #0C1726;
+  padding: 10px;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para la lista desplegable */
+.selectList {
+  list-style: none;
+  padding: 0;
+  margin: 7% 0 0 0;
+  background-color: #0C1726;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 225px;
+}
+
+/* Estilos para los elementos de la lista desplegable */
+.selectList li {
+  padding: 15px;
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: 100;
+
+}
+
+/* Estilos para los elementos de la lista desplegable al pasar el ratón sobre ellos */
+.selectList li:hover {
+  background-color: #3C5973;
+}
+
+.checkbox {
+  transform: scale(1.5);
+  margin-right: 30px;
+  background-color: #3C5973;
+  border: 2px solid #3C5973;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.divSlect{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #0C1726;
+  width: 25%;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+.radio input {
+  transform: scale(1.5);
+  margin-right: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.divInput {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.radioOption {
+  padding-top: 20px;
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: 100;
+}
+
+.inputName,
+.inputEmail {
+  border-radius: 5px;
+  border: 1px solid #0C1726;
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+}
+
+.inputMessage {
+  border-radius: 5px;
+  background-color: #0C1726;
+  width: 100%;
+  height: 70px;
+  margin: 10px 0;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 15px 0px 0 5px;
+
+}
+
+.submitButton {
+  border: none;
+  border-radius: 5px;
+  background: #3C5973;
+  width: 150px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+  justify-content: center;
+  margin: auto;
+  font-weight: 700;
+}
+
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .InputsSection {
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .divSlect {
+    width: 80%;
+  }
+
+  .radio {
+    width: 80%;
+    height: 250px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  .radio input {
+    margin-right: 50px;
+    margin-left: 30px;
+  }
+
+  .divInput {
+    width: 80%;
+  }
+
+  .radioOption {
+    padding-top: 10px;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 100;
+    height: 20%;
+  }
+}
+
+/* Estilos para tamaños de pantalla de tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .InputsSection {
+    margin-top: 0%;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+
+  }
+
+  .radio {
+    width: 25%;
+    height: 200px;
+    border-radius: 8px;
+    font-size: 14px;
+
+  }
+
+  .radio input {
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+
+  .radioOption {
+    padding-top: 10px;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 100;
+    height: auto;
+    /* Cambiado a auto para ajustarse al contenido */
+  }
+
+  .selectList li {
+    font-size: 18px;
+    padding-bottom: 2px;
+  }
+
+  .selectList {
+    margin: 7% 0 0 0;
+    background-color: #0C1726;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 160px;
+  }
+
+  .divInput {
+    width: 25%;
+    margin-right: 20px;
+    margin-top: 2%
+  }
+
+  .divSlect {
+    width: 25%;
+  }
+}
